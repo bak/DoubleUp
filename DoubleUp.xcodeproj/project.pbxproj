@@ -12,11 +12,15 @@
 		B55B7EC91664B21E008AF3AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B55B7EC81664B21E008AF3AE /* main.m */; };
 		B55B7ECD1664B21E008AF3AE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B55B7ECB1664B21E008AF3AE /* Credits.rtf */; };
 		B55B7ED01664B21E008AF3AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B55B7ECF1664B21E008AF3AE /* AppDelegate.m */; };
-		B55B7ED31664B21E008AF3AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55B7ED11664B21E008AF3AE /* MainMenu.xib */; };
 		B55B7EDB1664B21E008AF3AE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55B7EDA1664B21E008AF3AE /* SenTestingKit.framework */; };
 		B55B7EDC1664B21E008AF3AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55B7EBC1664B21E008AF3AE /* Cocoa.framework */; };
 		B55B7EE41664B21E008AF3AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B55B7EE21664B21E008AF3AE /* InfoPlist.strings */; };
 		B55B7EE71664B21E008AF3AE /* DoubleUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B55B7EE61664B21E008AF3AE /* DoubleUpTests.m */; };
+		B5A4C02B1664BF3C00CB4D20 /* active@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B5A4C0271664BF3C00CB4D20 /* active@2x.tiff */; };
+		B5A4C02C1664BF3C00CB4D20 /* inactive@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B5A4C0281664BF3C00CB4D20 /* inactive@2x.tiff */; };
+		B5A4C02D1664BF3C00CB4D20 /* inactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B5A4C0291664BF3C00CB4D20 /* inactive.tiff */; };
+		B5A4C02E1664BF3C00CB4D20 /* active.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B5A4C02A1664BF3C00CB4D20 /* active.tiff */; };
+		B5A4C0301664C00600CB4D20 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A4C02F1664C00600CB4D20 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +46,17 @@
 		B55B7ECC1664B21E008AF3AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		B55B7ECE1664B21E008AF3AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B55B7ECF1664B21E008AF3AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B55B7ED21664B21E008AF3AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B55B7ED91664B21E008AF3AE /* DoubleUpTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleUpTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55B7EDA1664B21E008AF3AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B55B7EE11664B21E008AF3AE /* DoubleUpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubleUpTests-Info.plist"; sourceTree = "<group>"; };
 		B55B7EE31664B21E008AF3AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B55B7EE51664B21E008AF3AE /* DoubleUpTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleUpTests.h; sourceTree = "<group>"; };
 		B55B7EE61664B21E008AF3AE /* DoubleUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleUpTests.m; sourceTree = "<group>"; };
+		B5A4C0271664BF3C00CB4D20 /* active@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "active@2x.tiff"; sourceTree = "<group>"; };
+		B5A4C0281664BF3C00CB4D20 /* inactive@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "inactive@2x.tiff"; sourceTree = "<group>"; };
+		B5A4C0291664BF3C00CB4D20 /* inactive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = inactive.tiff; sourceTree = "<group>"; };
+		B5A4C02A1664BF3C00CB4D20 /* active.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = active.tiff; sourceTree = "<group>"; };
+		B5A4C02F1664C00600CB4D20 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +122,10 @@
 		B55B7EC21664B21E008AF3AE /* DoubleUp */ = {
 			isa = PBXGroup;
 			children = (
+				B5A4C0251664BF3000CB4D20 /* Graphics */,
 				B55B7ECE1664B21E008AF3AE /* AppDelegate.h */,
 				B55B7ECF1664B21E008AF3AE /* AppDelegate.m */,
-				B55B7ED11664B21E008AF3AE /* MainMenu.xib */,
+				B5A4C02F1664C00600CB4D20 /* MainMenu.xib */,
 				B55B7EC31664B21E008AF3AE /* Supporting Files */,
 			);
 			path = DoubleUp;
@@ -151,6 +160,17 @@
 				B55B7EE21664B21E008AF3AE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5A4C0251664BF3000CB4D20 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				B5A4C0271664BF3C00CB4D20 /* active@2x.tiff */,
+				B5A4C0281664BF3C00CB4D20 /* inactive@2x.tiff */,
+				B5A4C0291664BF3C00CB4D20 /* inactive.tiff */,
+				B5A4C02A1664BF3C00CB4D20 /* active.tiff */,
+			);
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +246,11 @@
 			files = (
 				B55B7EC71664B21E008AF3AE /* InfoPlist.strings in Resources */,
 				B55B7ECD1664B21E008AF3AE /* Credits.rtf in Resources */,
-				B55B7ED31664B21E008AF3AE /* MainMenu.xib in Resources */,
+				B5A4C02B1664BF3C00CB4D20 /* active@2x.tiff in Resources */,
+				B5A4C02C1664BF3C00CB4D20 /* inactive@2x.tiff in Resources */,
+				B5A4C02D1664BF3C00CB4D20 /* inactive.tiff in Resources */,
+				B5A4C02E1664BF3C00CB4D20 /* active.tiff in Resources */,
+				B5A4C0301664C00600CB4D20 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +323,6 @@
 				B55B7ECC1664B21E008AF3AE /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		B55B7ED11664B21E008AF3AE /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B55B7ED21664B21E008AF3AE /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		B55B7EE21664B21E008AF3AE /* InfoPlist.strings */ = {
@@ -446,6 +462,7 @@
 				B55B7EEC1664B21E008AF3AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B55B7EED1664B21E008AF3AE /* Build configuration list for PBXNativeTarget "DoubleUpTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +471,7 @@
 				B55B7EEF1664B21E008AF3AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

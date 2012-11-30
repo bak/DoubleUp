@@ -10,9 +10,22 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
-}
+    @synthesize menu;
+
+    - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+    {
+        NSStatusBar *status_bar = [NSStatusBar systemStatusBar];
+        status_item = [status_bar statusItemWithLength:NSVariableStatusItemLength];
+        NSImage *inactive_icon = [NSImage imageNamed:@"inactive"];
+        NSImage *active_icon = [NSImage imageNamed:@"active"];
+        [status_item setImage:inactive_icon];
+        [status_item setAlternateImage:active_icon];
+        [status_item setHighlightMode:YES];
+        [status_item setMenu:menu];
+        
+        [NSEvent addGlobalMonitorForEventsMatchingMask:(NSKeyDownMask) handler:^(NSEvent *event){
+//            [self keyWasPressedFunction: event];
+        }];
+    }
 
 @end
