@@ -22,10 +22,31 @@
         [status_item setAlternateImage:active_icon];
         [status_item setHighlightMode:YES];
         [status_item setMenu:menu];
+        count = 0;
         
-        [NSEvent addGlobalMonitorForEventsMatchingMask:(NSKeyDownMask) handler:^(NSEvent *event){
-//            [self keyWasPressedFunction: event];
+        // Spec:
+        // Detects two subsequent (within n seconds) keydowns of either Shift key, without intervening keyDown of any other key.
+        // Strategy: increment a count that is reset to zero whenever:
+        // 1. any other key is pressed
+        // 2. n seconds pass
+        // 3. Shift is pressed twice and the action is done
+        [NSEvent addGlobalMonitorForEventsMatchingMask:(NSFlagsChangedMask) handler:^(NSEvent *event){
+            // detect Shift
+            if (([event keyCode] == 56) || ([event keyCode] == 60)) {
+                // odd numbers are shift-key down, evens are up
+                count++;
+                if (count == 4) {
+                    [self toggle];
+                    count = 0;
+                }
+                NSLog(@"count: %i", count);
+            }
         }];
+    }
+
+    -(void) toggle
+    {
+        NSLog(@"Did toggle");
     }
 
 @end

@@ -10,9 +10,11 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     NSStatusItem *status_item;
+    int count;
 }
 
-//@property (assign) IBOutlet NSWindow *window;
+-(void) toggle;
+
 @property (assign) IBOutlet NSMenu *menu;
 
 @end
