@@ -10,10 +10,14 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     NSStatusItem *status_item;
-    int count;
+    int shiftCount;
 }
 
--(void) toggle;
+-(void) initializeState;
+-(void) setUpUI;
+-(void) monitorShift;
+-(void) monitorNonShift;
+-(void) toggleCaps;
 
 @property (assign) IBOutlet NSMenu *menu;
 
