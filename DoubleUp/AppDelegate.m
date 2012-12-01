@@ -66,7 +66,7 @@
             NSLog(@"toggling");
             
             CGEventRef eventDown = CGEventCreateKeyboardEvent(eventSource, 57, YES);
-            CGEventPost(kCGSessionEventTap, eventDown);
+            CGEventPost(kCGHIDEventTap, eventDown);
             CFRelease(eventDown);
             
 //            CGEventRef eventUp = CGEventCreateKeyboardEvent(eventSource, (CGKeyCode)57, NO);
