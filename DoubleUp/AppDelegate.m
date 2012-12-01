@@ -27,17 +27,20 @@
 
     -(void) monitorShift
     {
+        // Using NSFlagsChangedMask instead of NSShiftKeyMask so we
+        // can catch all other modifier flags, and reset the count.
         [NSEvent addGlobalMonitorForEventsMatchingMask:(NSFlagsChangedMask) handler:^(NSEvent *event){
             // increment count for subsequent Shifts, reset for anything else
+            NSLog(@"code: %hu", [event keyCode]);
             if (([event keyCode] == 56) || ([event keyCode] == 60)) {
                 
                 shiftCount++;
                 
                 // Does not discern between keyup and keydown,
-                // so odd numbers are shift-key down, evens are up
+                // odd numbers are shift-key down, evens are up.
                 if (shiftCount == 4) {
                     [self toggleCaps];
-                } else if (shiftCount > 4) { // whoops.
+                } else if (shiftCount > 4) { // ?
                     shiftCount = 0;
                 }
             } else {
@@ -56,7 +59,22 @@
 
     -(void) toggleCaps
     {
-        NSLog(@"Did toggle");
+        
+        CGEventSourceRef eventSource = CGEventSourceCreate(kCGEventSourceStateCombinedSessionState);
+        if (eventSource != NULL) {
+
+            NSLog(@"toggling");
+            
+            CGEventRef eventDown = CGEventCreateKeyboardEvent(eventSource, (CGKeyCode)57, YES);
+            CGEventPost(kCGSessionEventTap, eventDown);
+            CFRelease(eventDown);
+            
+            CGEventRef eventUp = CGEventCreateKeyboardEvent(eventSource, (CGKeyCode)57, NO);
+            CGEventPost(kCGSessionEventTap, eventUp);
+            CFRelease(eventUp);
+            
+            CFRelease(eventSource);
+        }
         shiftCount = 0;
     }
 
