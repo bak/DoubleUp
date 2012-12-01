@@ -60,18 +60,18 @@
     -(void) toggleCaps
     {
         
-        CGEventSourceRef eventSource = CGEventSourceCreate(kCGEventSourceStateCombinedSessionState);
+        CGEventSourceRef eventSource = CGEventSourceCreate(kCGEventSourceStateHIDSystemState);
         if (eventSource != NULL) {
 
             NSLog(@"toggling");
             
-            CGEventRef eventDown = CGEventCreateKeyboardEvent(eventSource, (CGKeyCode)57, YES);
+            CGEventRef eventDown = CGEventCreateKeyboardEvent(eventSource, 57, YES);
             CGEventPost(kCGSessionEventTap, eventDown);
             CFRelease(eventDown);
             
-            CGEventRef eventUp = CGEventCreateKeyboardEvent(eventSource, (CGKeyCode)57, NO);
-            CGEventPost(kCGSessionEventTap, eventUp);
-            CFRelease(eventUp);
+//            CGEventRef eventUp = CGEventCreateKeyboardEvent(eventSource, (CGKeyCode)57, NO);
+//            CGEventPost(kCGSessionEventTap, eventUp);
+//            CFRelease(eventUp);
             
             CFRelease(eventSource);
         }
